@@ -1,0 +1,17 @@
+<h1>{{message}}</h1>
+<h2>  {{result}}</h2>
+<form ng-show="form" method="post" name="loginform" novalidate ng-submit="login()">
+    <div class="form-group">
+        <label class="form-label">Email:</label>
+        <input type="email" ng-required="true" ng-model="user.email" name="email" class="form-input">
+        <p ng-show="loginform.email.$invalid && loginform.email.$touched">This field is required for valid email</p>
+    </div>
+    <div class="form-group">
+        <label class="form-label">Password:</label>
+        <input type="password" name="password" ng-model="user.password" ng-required="true" class="form-input" minlength="6">
+        <p ng-show="loginform.password.$invalid && loginform.password.$touched">This field is required</p>
+    </div>
+    <div class="form-group">
+        <input ng-disabled="loginform.$invalid" type="submit" value="Login">
+    </div>
+</form>

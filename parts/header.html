@@ -1,0 +1,11 @@
+<nav>
+    <div class="container">
+        <div class="left brand"><a href="#!/">AngularJS</a></div>
+        <ul class="right">
+            <li ng-hide="currentUser" class="left"><a href="#!/register">Register</a></li>
+            <li ng-hide="currentUser" class="left"><a href="#!/login">Login</a></li>
+            <li ng-show="currentUser" class="left"><a href="#!/logout">Logout</a></li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+</nav>

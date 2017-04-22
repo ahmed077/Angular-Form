@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Register/Login Angular</title>
+    <!--Angular-->
+    <script src="../angular/angular.min.js"></script>
+    <script src="../angular/angular-route.min.js"></script>
+    <script src="../angular/angular-animate.min.js"></script>
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+    <!--AngularFire-->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    <!--Config Firebase-->
+    <script>
+        var config = {
+            apiKey: "AIzaSyAOC0rCeyw8ZFEQ-b64NyDTcpeAPA9BVYs",
+            authDomain: "simple-form-82495.firebaseapp.com",
+            databaseURL: "https://simple-form-82495.firebaseio.com",
+            storageBucket: "simple-form-82495.appspot.com",
+            messagingSenderId: "437311148561"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <!--my scripts-->
+    <script src="js/main.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/controllers.js"></script>
+    <!--stylesheets-->
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<body>
+<header ng-include="'parts/header.html'"></header>
+<div class="container" id="main-container">
+<section id="main" ng-view>
+
+</section>
+</div>
+</body>
+</html>

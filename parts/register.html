@@ -1,0 +1,31 @@
+<h1>{{message}}</h1>
+<h2>{{result}}</h2>
+<form name="registerform" novalidate ng-submit="register()" method="post">
+    <div class="form-group">
+        <label class="form-label">Username:</label>
+        <input ng-required="true" type="text" name="username" ng-model="user.username" class="form-input">
+        <p ng-show="registerform.username.$invalid && registerform.username.$touched">This field is required, You must choose a unique username</p>
+    </div>
+    <div class="form-group">
+        <label class="form-label">Full Name:</label>
+        <input type="text" name="fullname" ng-required="true" class="form-input" ng-model="user.fullname">
+        <p ng-show="registerform.fullname.$invalid && registerform.fullname.$touched">This field is required</p>
+    </div>
+    <div class="form-group">
+        <label class="form-label">Password:</label>
+        <input type="password" name="password" ng-model="user.password" ng-required="true" class="form-input" minlength="6">
+        <p ng-show="registerform.password.$invalid && registerform.password.$touched">This field is required with 6 or more characters</p>
+    </div>
+    <div class="form-group">
+        <label class="form-label">Email:</label>
+        <input type="email" ng-required="true" ng-model="user.email" name="email" class="form-input">
+        <p ng-show="registerform.email.$invalid && registerform.email.$touched">This field is required for valid email</p>
+    </div>
+    <div class="form-group">
+        <input ng-disabled="registerform.$invalid" type="submit" value="Register">
+    </div>
+</form>
+<div ng-repeat="(key,value) in user">
+    <span>{{key}}</span>
+    <span>{{value}}</span>
+</div>
